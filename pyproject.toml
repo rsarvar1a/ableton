@@ -1,0 +1,21 @@
+[project]
+name = "ableton"
+version = "0.1.0"
+description = "A patcher for Live 12 Suite."
+authors = [
+    {name = "Rohan Sarvaria",email = "rsarvaria@uwaterloo.ca"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "cryptography (>=45.0.4,<46.0.0)",
+    "pyyaml (>=6.0.2,<7.0.0)",
+    "dotdict (>=0.1,<0.2)"
+]
+
+[tool.poetry.scripts]
+patcher = 'ableton.__main__:main'
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
