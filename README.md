@@ -34,6 +34,16 @@ poetry run patcher --config data/config.yaml --patch
 
 If you are using MacOS, you'll need to codesign the application to prevent it from crashing.
 
+1. Create a new self-signed certificate in Keychain Access.app using the Certificate Assistant tool.
+
+2. Create a `scripts/macos.command` file; see [here](scripts/macos.example.command) for an example.
+
+```sh
+CERTIFICATE_NAME='<certificate name from Certificate Assistant step>'
+ABLETON_APP_NAME='Ableton Live <version and edition>.app'
+```
+
+3. Run the codesigning command.
 
 ```sh
 ./scripts/macos.command
