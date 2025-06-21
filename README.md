@@ -1,14 +1,14 @@
 
 # ableton-patcher
 
-## Install
+### Install
 
 ```sh
 git clone git@github.com:rsarvar1a/ableton
 poetry install
 ```
 
-## Usage
+### Usage
 
 1. Put your hardware and version details into a `config.yaml` file (see [here](data/config.example.yaml) for an example).  
 Do not touch the keygen or patch sections unless you know what you're doing.
@@ -30,7 +30,16 @@ poetry run patcher --config data/config.yaml --patch
 3. Drag the Authorize.auz file into your Ableton window.
 
 
-## Uninstall
+### MacOS
+
+If you are using MacOS, you'll need to codesign the application to prevent it from crashing.
+
+
+```sh
+./scripts/macos.command
+```
+
+### Uninstall
 
 This removes the patch from your executable, restoring it to factory conditions.
 
@@ -38,7 +47,7 @@ This removes the patch from your executable, restoring it to factory conditions.
 poetry run patcher --config data/config.yaml --revert
 ```
 
-## If you just need a key
+### If you just need a key
 
 Run the script without a `--patch` or `--revert` argument.
 
